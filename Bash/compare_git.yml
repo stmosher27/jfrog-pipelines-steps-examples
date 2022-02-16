@@ -1,0 +1,17 @@
+resources:
+  - name:      myGitRepo
+    type:       GitRepo
+    configuration:
+        # your configutation
+
+pipelines:
+  - name: myPipeline
+    steps:
+      - name: step_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: myGitRepo
+        execution:
+           onExecute:
+             - compare_git --resources myGitRepo # your options
