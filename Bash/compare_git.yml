@@ -17,4 +17,4 @@ pipelines:
             - name: myGitRepo
         execution:
            onExecute:
-             - compare_git --resources myGitRepo --commit-range d8594807c2cae7d79e20a6654d9eed072b8df15d..236a7112127f958443841baf42fd63d645b8e959
+             - compare_git --resource myGitRepo --commit-range d8594807c2cae7d79e20a6654d9eed072b8df15d..236a7112127f958443841baf42fd63d645b8e959
