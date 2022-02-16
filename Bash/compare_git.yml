@@ -2,7 +2,10 @@ resources:
   - name:      myGitRepo
     type:       GitRepo
     configuration:
-        # your configutation
+        gitProvider: myGithub
+        path: stmosher27/jfrog-pipelines-steps-examples
+        branches:
+          include: main  
 
 pipelines:
   - name: myPipeline
