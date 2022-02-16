@@ -17,4 +17,4 @@ pipelines:
             - name: myGitRepo
         execution:
            onExecute:
-             - compare_git --resources myGitRepo # your options
+             - compare_git --resources myGitRepo --commit-range HEAD~1..HEAD
