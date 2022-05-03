@@ -1,0 +1,17 @@
+pipelines:
+  - name: example_pipeline
+    configuration:
+      runtime:
+        type: image
+        image:
+          custom:
+            name: releases-docker.jfrog.io/jfrog/pipelines-u18java
+            tag: "17"
+            options: "-v /$HOME/.m2:$HOME/.m2"
+    steps:
+      - name: testMount
+        type: Bash
+        execution:
+          onExecute:
+            - echo "something" > /root/.m2/file.txt
+            - ls -a $HOME/.m2/
